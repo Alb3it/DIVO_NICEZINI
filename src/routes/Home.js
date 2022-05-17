@@ -5,8 +5,8 @@ export default function Home(){
   const navigate = useNavigate();
   return (
     <S.Box>
-      <S.Title onClick={() => navigate('system')}>당신의 매장을 책임질</S.Title>
-      <S.Title onClick={() => navigate('index-map')}>매출 관리부터 마케팅까지</S.Title>
+      <S.Title onClick={() => navigate('system')}>외식소비의도 <br></br> 상세분석</S.Title>
+      <S.Title onClick={() => navigate('index-map')}>키워드 상권분석</S.Title>
     </S.Box>
   );
 }
@@ -17,7 +17,7 @@ S.Box = styled.div`
   display: flex;
   flex-flow: row;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
   top: 48px;
@@ -25,68 +25,20 @@ S.Box = styled.div`
 `;
 
 S.Title = styled.div`
-  font-weight: 900;
+  font-weight: 800;
   font-size: 54px;
-`;
-
-
-S.FeatureBox = styled.div`
-  background: white;
-  z-index: 2;
-  width: 100%;
-  height: 100vh;
-`;
-
-S.Down = styled.div`
-  position: absolute;
-  bottom: 50px;
-  font-size: 20px;
   &:hover{
-    cursor: pointer;
+    transform: scale(1.01);
+    transition-duration: 0.3s;
   }
-`;
-
-S.ImgBox = styled.div`
-  background: white;
-  width: 100%;
-  z-index: 2;
+  cursor: pointer;
+  width: 600px;
+  height: 200px;
   display: flex;
-  padding: 100px 280px;
-  flex-flow: column;
-`;
-
-S.TextBox = styled.div`
-  width: 100%;
-  border-radius: 25px;
-  padding: 120px 40px;
-  font-weight: bold;
-  font-size: 50px;
-  background: ${props => props.color[0]};
-  color: ${props => props.color[1]};
-  display: flex;
-  flex-flow: column;
-  flex: ${props => props.flex};
-`;
-
-S.Text = styled.div`
-  margin-bottom: 10px;
-`;
-
-S.SubText = styled(S.Text)`
-  font-weight: 500;
-  font-size: ${props => props.size}px;
-`;
-
-S.RowBlank = styled.div`
-  height: 20px;
-  width: 100%;
-`;
-
-S.ColBlank = styled.div`
-  height: 100%;
-  width: 20px;
-`;
-
-S.Flex = styled.div`
-  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  color: #111111;
+  box-shadow: 5px 5px 10px #aaaaaa;
 `;

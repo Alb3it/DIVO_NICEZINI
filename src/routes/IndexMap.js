@@ -10,8 +10,11 @@ import { changeZoom, getPlaceOverlay, defaultQuery } from '@constants';
 import { showPopup } from '@functions';
 import SearchBlock from '@/components/indexMap/SearchBlock';
 import CategoryBox from '@/components/indexMap/CategoryBox';
+import { useNavigate } from 'react-router-dom';
 
 export default function IndexMap(){
+  const navigate = useNavigate();
+
   const [ map, showMap ] = useState(null);
   const mapLevel = 12;
   const mapCenter = {
@@ -278,6 +281,22 @@ export default function IndexMap(){
 }
 
 const S = {};
+
+S.Back = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+  bottom: 15px;
+  border-radius: 12px;
+  left: calc(50% - 100px);
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  opacity: 0.9
+`;
 
 S.Map = styled.div`
   position: absolute;

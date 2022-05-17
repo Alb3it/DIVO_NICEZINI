@@ -8,6 +8,7 @@ import { IM_RG_URL, SYS_KW_RANK_URL } from "@api";
 import { useFetch } from "@hooks";
 import DetailPopup from "@/components/system/DetailPopup";
 import { systemCols } from "@constants";
+import { useNavigate } from 'react-router-dom';
 
 export default function System(){
   const [ regionType, setRegionType ] = useState('legal');
@@ -20,6 +21,8 @@ export default function System(){
   const [ keywordList, setKeywordList ] = useState([]);
   const [ startDate, setStartDate ] = useState('2021-05-01');
   const [ endDate, setEndDate ] = useState('2022-05-01');
+
+  const navigate = useNavigate();
 
   const [ popupCode, setPopupCode ] = useState(null);
 
@@ -59,13 +62,23 @@ export default function System(){
       : 
         <KeywordArea keywordList={keywordList} setKeywordList={setKeywordList} />
       }
-      <S.Submit onClick={onSubmit}>상권 분석</S.Submit>
+      <S.Flex>
+        <S.Submit onClick={onSubmit}>상권 분석</S.Submit>
+        <S.Back onClick={() => navigate('/')}>홈으로 돌아가기</S.Back>
+      </S.Flex>
       {popupCode && <DetailPopup popupCode={popupCode} setPopupCode={setPopupCode} />}
     </>
   );
 }
 
 const S = {};
+
+S.Flex = styled.div`
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 S.DateRange = styled.div`
   display: flex;
@@ -91,13 +104,26 @@ S.Toggle = styled.div`
 
 S.Submit = styled.button`
   width: 100px;
-  margin: 20px auto;
   padding: 10px 0;
   border-radius: 5px;
   background: #06c;
   color: #f5f5f7;
   border: none;
   cursor: pointer;
+`;
+
+S.Back = styled.button`
+  width: 100px;
+  padding: 10px 0;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #666666;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  &:hover{
+    text-decoration: underline;
+  }
 `;
 
 S.Button = styled.div`
