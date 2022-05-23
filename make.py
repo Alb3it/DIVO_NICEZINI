@@ -9,6 +9,6 @@ while True:
     if re.match(p, v):
         version = v
         break
-os.system("docker build -t brighthonor/frontend_18:"+version+" -t brighthonor/frontend_18:latest"+" .")
-os.system("docker push brighthonor/frontend_18:"+version)
-os.system("docker push brighthonor/frontend_18:latest")
+os.system("docker build -t brighthonor/frontend_18_nice:"+version+" -t brighthonor/frontend_18_nice:latest"+" .")
+os.system("docker push brighthonor/frontend_18_nice:"+version)
+os.system("docker push brighthonor/frontend_18_nice:latest")
