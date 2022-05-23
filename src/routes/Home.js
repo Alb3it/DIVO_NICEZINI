@@ -7,6 +7,7 @@ export default function Home(){
     <S.Box>
       <S.Title onClick={() => navigate('system')}>외식소비의도 <br></br> 상세분석</S.Title>
       <S.Title onClick={() => navigate('index-map')}>키워드 상권분석</S.Title>
+      <S.Title onClick={() => navigate('growth')}>급등락 키워드</S.Title>
     </S.Box>
   );
 }
@@ -15,7 +16,7 @@ const S = {};
 
 S.Box = styled.div`
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   width: 100%;
   justify-content: space-around;
   align-items: center;

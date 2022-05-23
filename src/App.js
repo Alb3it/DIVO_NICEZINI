@@ -4,6 +4,7 @@ import Home from "@/routes/Home";
 import NoAccess from "@/components/errorPage/NoAccess";
 import IndexMap from "@/routes/IndexMap";
 import System from "@/routes/System";
+import Growth from "./routes/Growth";
 
 export default function App(){
 
@@ -14,6 +15,7 @@ export default function App(){
       children: [
         { path: '/index-map', element: <IndexMap /> },
         { path: '/system', element: <System /> },
+        { path: '/growth', element: <Growth /> },
         { path: '/*', element: <NoAccess /> },
       ],
     },
