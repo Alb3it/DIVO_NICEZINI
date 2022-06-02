@@ -1150,6 +1150,68 @@ export const systemCols = [
   }
 ];
 
+export const csvQHeader = [
+  {
+    label: '순위',
+    key: 'rank'
+  },
+  {
+    label: '식당명',
+    key: 'name'
+  },
+  {
+    label: 'OMRANK',
+    key: 'omrank'
+  },
+  {
+    label: '블로그 리뷰수',
+    key: 'blogReviewCnt'
+  },
+  {
+    label: '방문자 리뷰수',
+    key: 'visitorReviewCnt'
+  },
+  {
+    label: '업종',
+    key: 'category'
+  },
+  {
+    label: '주소',
+    key: 'address'
+  },
+];
+
+export const systemQCols = [
+  {
+    Header: '번호',
+    accessor: 'rank'
+  },
+  {
+    Header: '식당명',
+    accessor: 'name'
+  },
+  {
+    Header: '음식점 순위',
+    accessor: 'omrank'
+  },
+  {
+    Header: '블로그 리뷰수',
+    accessor: 'blogReviewCnt'
+  },
+  {
+    Header: '방문자 리뷰수',
+    accessor: 'visitorReviewCnt'
+  },
+  {
+    Header: '업종',
+    accessor: 'category'
+  },
+  {
+    Header: '주소',
+    accessor: 'address'
+  },
+];
+
 export const csvHeader = [
   {
     label: '순위',

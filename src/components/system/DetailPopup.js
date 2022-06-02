@@ -52,10 +52,10 @@ S.SubTitle = styled.div`
 
 S.Popup = styled.div`
   position: fixed;
-  top: 60px;
+  top: 20px;
   left: 24px;
   right: 24px;
-  bottom: 12px;
+  border: 0.5px solid;
   background: #ffffff;
   border-radius: 20px;
   padding: 30px;

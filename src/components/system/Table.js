@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { csvHeader } from "@constants";
 import { CSVLink } from "react-csv";
 
-export default function Table({ column, data, csvHeaders = csvHeader, setPopupCode = () => {}, csvTitle = "상권통계" }){
+export default function Table({ column, data, csvHeaders, setPopupCode = () => {}, csvTitle, fixed = false }){
   const columns = useMemo(
     () => column
   );
@@ -28,7 +28,7 @@ export default function Table({ column, data, csvHeaders = csvHeader, setPopupCo
   } = useTable({ columns, data, initialState: { pageIndex: 0 } }, useSortBy, usePagination);
 
   return (
-    <S.Table>
+    <S.Table fixed={fixed}>
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map(headerGroup => (
@@ -54,7 +54,6 @@ export default function Table({ column, data, csvHeaders = csvHeader, setPopupCo
             return (
               <tr {...row.getRowProps()}>
                 {row.cells.map(cell => {
-                  console.log(cell);
                   return (
                     <td {...cell.getCellProps()} onClick={
                       () => {
@@ -145,7 +144,7 @@ S.Page = styled.span`
 S.Table = styled.div`
   font-size: 12px;
   overflow-y: auto;
-
+  ${props => props.fixed && 'width: 1700px;'}
   table {
     border-spacing: 0;
     width: 100%;
