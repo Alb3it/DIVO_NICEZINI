@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from 'styled-components';
 import LegalArea from "@/components/system/LegalArea";
 import KeywordArea from "@/components/system/KeywordArea";
-import Table from "@/components/system/Table";
+import STable from "@/components/system/Table";
 import Loading from "@/components/Loading";
 import { IM_RG_URL, SYS_KW_RANK_URL } from "@api";
 import { useFetch } from "@hooks";
@@ -58,7 +58,7 @@ export default function System(){
   return (
     <>
       <S.Table>
-        {tableLoading ? <S.Loading><Loading size={40} /></S.Loading> : tableData && <Table column={regionType === 'query' ? systemQCols : systemCols} data={tableData.data} setPopupCode={setPopupCode} csvHeaders={regionType === 'query' ? csvQHeader : csvHeader} csvTitle={regionType==='query' ? "음식점 통계" : "상권 통계"} fixed />}
+        {tableLoading ? <S.Loading><Loading size={40} /></S.Loading> : tableData && <STable column={regionType === 'query' ? systemQCols : systemCols} data={tableData.data} setPopupCode={setPopupCode} csvHeaders={regionType === 'query' ? csvQHeader : csvHeader} csvTitle={regionType==='query' ? "음식점 통계" : "상권 통계"} fixed />}
       </S.Table>
       <S.Toggle>
         <S.Button selected={regionType === 'regionCodes'} onClick={() => setRegionType('regionCodes')}>행정구역</S.Button>

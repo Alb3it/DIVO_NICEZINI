@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { useSortBy, useTable } from "react-table";
+import { Table } from "react-bootstrap";
 import styled from 'styled-components';
 import { CSVLink } from "react-csv";
 import { growthCols, growthCSVHeader, subjectName } from "@constants";
@@ -19,7 +20,7 @@ export default function GrowthTable({ subject, data, start, setStart, display, s
 
   return (
     <S.Table>
-      <table {...getTableProps()}>
+      <Table hover striped {...getTableProps()}>
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -47,7 +48,7 @@ export default function GrowthTable({ subject, data, start, setStart, display, s
             )
           })}
         </tbody>
-      </table>
+      </Table>
       <S.BottomBar>
         <div>
           <button onClick={() => setStart(0)} disabled={!start}>
