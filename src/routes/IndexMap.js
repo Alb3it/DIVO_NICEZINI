@@ -301,7 +301,7 @@ S.Back = styled.div`
 S.Map = styled.div`
   position: absolute;
   top: 0;
-  left: 0;
+  left: 154px;
   right: 0;
   bottom: 0;
   z-index: 0;
@@ -325,7 +325,7 @@ S.RightBar = styled.div`
 S.Hide = styled.div`
   position: absolute;
   top: calc(50% - 24px);
-  left: ${props => props.hide ? 0 : '320px'};
+  left: ${props => props.hide ? "154px" : '474px'};
   width: 23px;
   height: 48px;
   background: white;
@@ -361,7 +361,7 @@ S.Click = styled.div`
 `;
 
 S.Setting = styled(S.Click)`
-  left: 468px;
+  left: 622px;
   top: 26px;
 `;
 

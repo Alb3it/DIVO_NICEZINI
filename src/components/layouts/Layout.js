@@ -5,6 +5,8 @@ import { Chart as ChartJS, ArcElement, BarElement, CategoryScale, Filler, Legend
 import { DEL_CORP_URL, CORPLIST_URL } from '@api';
 import { useFetch } from '@hooks';
 import { useEffect } from 'react';
+import SideBar from './SideBar';
+
 
 ChartJS.register(
   RadialLinearScale,
@@ -27,6 +29,7 @@ export default function Layout({ sticky = false }){
   return (
     <>
       <GlobalStyles />
+      <SideBar />
       <S.Body>
         <Outlet />
       </S.Body>
@@ -41,5 +44,6 @@ S.Body = styled.div`
   display: flex;
   flex-flow: column;
   flex: 1;
+  padding: 0 30px;
 `;
 

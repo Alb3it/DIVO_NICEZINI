@@ -237,7 +237,7 @@ const S = {};
 S.Gradient = styled.div`
   position: absolute;
   top: 0;
-  left: 0;
+  left: 154px;
   width: 320px;
   height: 58px;
   backdrop-filter: blur(12px);
@@ -255,7 +255,7 @@ S.Body = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: absolute;
   top: 0px;
-  left: 0;
+  left: 154px;
   bottom: 0;
   width: 320px;
   box-shadow: 2px 4px 12px rgb(38 59 77 / 20%);
@@ -339,6 +339,7 @@ S.Addr = styled.div`
 S.Click = styled.div`
   position: absolute;
   top: 26px;
+  left: 154px;
   height: 36px;
   width: 36px;
   background: white;
@@ -357,21 +358,21 @@ S.Click = styled.div`
 `;
 
 S.Bound = styled(S.Click)`
-  left: 376px;
+  left: 530px;
   &:hover{
     cursor: pointer;
   }
 `;
 
 S.Korea = styled(S.Click)`
-  left: 422px;
+  left: 576px;
   &:hover{
     cursor: pointer;
   }
 `;
 
 S.Filter = styled(S.Click)`
-  left: 330px;
+  left: 484px;
 `;
 
 S.Summary = styled.summary`

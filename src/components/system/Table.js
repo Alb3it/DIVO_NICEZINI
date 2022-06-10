@@ -118,15 +118,15 @@ export default function STable({ column, data, csvHeaders, setPopupCode = () => 
           {pageCount>5&&<S.PageButton onClick={()=>{gotoPage(pageIndex<3 ? 4 : pageIndex<pageCount-3 ? pageIndex+2 : pageCount-1)}}
           active={pageIndex===pageOptions.length-1}>{pageIndex<3 ? 5 : pageIndex<pageCount-3 ? pageIndex+3 : pageCount}</S.PageButton>}
           {pageIndex<pageOptions.length-3&&<S.Text>···</S.Text>}
-          {pageIndex<pageOptions.length-3&&<S.PageButton size = "sm" variant="outline-primary" onClick={()=>{gotoPage(pageCount-1)}} >{pageOptions.length}</S.PageButton>}
-          <S.LButton size = "sm" variant="outline-primary" onClick={() => nextPage()} disabled={!canNextPage}>
+          {pageIndex<pageOptions.length-3&&<S.PageButton onClick={()=>{gotoPage(pageCount-1)}} >{pageOptions.length}</S.PageButton>}
+          <S.LButton onClick={() => nextPage()} disabled={!canNextPage}>
             {'>'}
           </S.LButton>
-          <S.RButton size = "sm" variant="outline-primary" onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
+          <S.RButton onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>
             {'>>'}
           </S.RButton>
         </S.Middle>
-        <CSVLink data={data} headers={csvHeaders} filename={csvTitle}><S.CSVButton size = "sm" variant="outline-secondary">CSV 다운받기</S.CSVButton></CSVLink>
+        <CSVLink data={data} headers={csvHeaders} filename={csvTitle}><S.CSVButton >CSV 다운받기</S.CSVButton></CSVLink>
       </S.BottomBar>
     </S.Table>
   );

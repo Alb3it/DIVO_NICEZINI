@@ -35,7 +35,7 @@ S.Flex = styled.div`
   display: flex;
   padding: 10px 10px 0 10px;
   top: 10px;
-  left: 0;
+  left: 154px;
   color: #263b4d;
   z-index: 3;
 `;

@@ -329,7 +329,7 @@ S.Close = styled.div`
 S.Gradient = styled.div`
   position: absolute;
   top: 0px;
-  left: 0;
+  left: 154px;
   width: 320px;
   height: 58px;
   backdrop-filter: blur(12px);
@@ -348,7 +348,7 @@ S.Body = styled.div`
   position: absolute;
   max-height: 100%;
   top: 0;
-  left: 0;
+  left: 154px;
   width: 320px;
   box-shadow: 2px 4px 12px rgb(38 59 77 / 20%);
   &::-webkit-scrollbar-thumb {
