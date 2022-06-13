@@ -24,8 +24,7 @@ ChartJS.register(
 ChartJS.defaults.font.family = 'Pretendard';
 ChartJS.defaults.plugins.legend.labels.usePointStyle = true;
 
-export default function Layout({ sticky = false }){
-
+export default function Layout(){
   return (
     <>
       <GlobalStyles />
